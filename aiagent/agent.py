@@ -9,7 +9,8 @@ from livekit.plugins import (
     noise_cancellation,
     silero,
 )
-from livekit.plugins.turn_detector.english import EnglishModel # from livekit.plugins.turn_detector.multilingual import MultilingualModel for multiple languages
+from livekit.plugins.turn_detector.english import EnglishModel
+ # from livekit.plugins.turn_detector.multilingual import MultilingualModel for multiple languages
 
 load_dotenv()
 
@@ -48,3 +49,6 @@ async def entrypoint(ctx: agents.JobContext):
 
 if __name__ == "__main__":
     agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
+
+# remove the venv from the git push, or just add it to the .gitignore, no need to push such large files
+# to github!
