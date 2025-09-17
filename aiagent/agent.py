@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-
+import os
 from livekit import agents
 from livekit.agents import AgentSession, Agent, RoomInputOptions
 from livekit.plugins import (
@@ -17,7 +17,7 @@ load_dotenv()
 
 class Assistant(Agent):
     def __init__(self) -> None:
-        super().__init__(instructions="You are a helpful voice AI assistant.")
+        super().__init__(instructions="You are a helpful voice AI assistant. Respond clearly and concisely.")
 
 
 async def entrypoint(ctx: agents.JobContext):

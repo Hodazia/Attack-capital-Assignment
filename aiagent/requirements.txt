@@ -1,27 +1,14 @@
-# Backend API
-fastapi==0.111.0
-uvicorn[standard]==0.30.1
-python-dotenv==1.0.1
-pydantic==2.7.4
-
-# LiveKit server SDKs (JWT + REST + helpers)
-livekit==0.6.0
-livekit-api==0.6.0
-
-# LLM provider (OpenAI v1 SDK)
-openai==1.35.10
-
-# HTTP client (optional but useful)
-httpx==0.27.0
-
-# Optional: Telephony if you add Twilio dial-out extension
-twilio==9.2.3
-
-# Optional: LiveKit Agents worker + plugins for full AI voice agent
-# NOTE: Removed below to avoid version conflicts with livekit==0.6.0.
-# If you need the Agents worker, upgrade livekit to ~=0.12 and add:
-# livekit-agents[deepgram,openai,cartesia,silero,turn-detector]==0.8.5
-# livekit-plugins-noise-cancellation==0.2.5
-
-# File uploads (only needed if you add upload endpoints)
-python-multipart==0.0.9
+fastapi
+uvicorn[standard]
+python-dotenv
+aiohttp
+pydantic
+livekit            # realtime SDK + small helpers
+livekit-api        # server SDK (room service, token helpers) # optional, for LLM/ TTS / STT integration
+openai
+gTTS               # optional fallback TTS
+aiofiles
+groq
+websockets
+httpx
+python-multipart
